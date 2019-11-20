@@ -11,7 +11,7 @@ The measured scenarios are the three that are the most frequent when working wit
 
 [A simple monorepo](https://github.com/VincentBailly/TypeScriptMonoRepo/tree/hackathon)
 
-|        |  warm cache + clean repo | warm cache + warm repo | adding a new dependency (react) |
+|        |  warm cache + clean repo | warm cache + warm repo | adding a new dependency  |
 | ------ | ------------------------ | ---------------------- | ----------------------- |
 | yarn   | 11s                       | 1.2s                   | 3.4s                      |
 | pnpm   | 13s                      | 2.2s                   | 5.5s                      |
@@ -20,13 +20,20 @@ The measured scenarios are the three that are the most frequent when working wit
 
 [A more complex monorepo](https://github.com/VincentBailly/TypeScriptMonoRepo/tree/benchmarkRepo)
 
-|        |  warm cache + clean repo | warm cache + warm repo | adding a new dependency (react) |
+|        |  warm cache + clean repo | warm cache + warm repo | adding a new dependency |
 | ------ | ------------------------ | ---------------------- | ----------------------- |
 | yarn   | 17s                       | 1s                   | 4s                      |
 | pnpm   | 16s                      | 1.5s                   | 6s                      |
 | mpnp   | 0.3s                     | 0.3s                   | 1.3s                    |
+    
+    
+[An even more complex monorepo](https://github.com/VincentBailly/TypeScriptMonoRepo/tree/largerRepo)    
  
- 
+ |        |  warm cache + clean repo | warm cache + warm repo | adding a new dependency |
+| ------ | ------------------------ | ---------------------- | ----------------------- |
+| yarn   | 27s                       | 1s                   | 6.9s                      |
+| pnpm   | 12.5s                      | 1.6s                   | 11s                      |
+| mpnp   | 0.3s                     | 0.3s                   | 1.7s                    |
  
 Because this is a proof of concept, many assumptions need to be fullfilled for mpnp to work:
 - yarn needs to be installed globally
