@@ -5,13 +5,13 @@ This project is not meant to be production ready but is a proof of concept.
 
 This package manager is optimized for performance in the context of working on a large nodejs-based monorepo.
 
-Benchmark of the various package managers on a simple monorepo, the measured scenarios are the three that are the most frequent when working with a monorepo.
+Benchmark of the various package managers on [a simple monorepo](https://github.com/VincentBailly/TypeScriptMonoRepo/tree/hackathon), the measured scenarios are the three that are the most frequent when working with a monorepo.
 
-|        |  warm cache + clean repo | warm cache + warm repo | adding a new dependency |
+|        |  warm cache + clean repo | warm cache + warm repo | adding a new dependency (react) |
 | ------ | ------------------------ | ---------------------- | ----------------------- |
-| yarn   | 9s                       | 0.5s                   | 3s                      |
-| pnpm   | 13s                      | 1.4s                   | 7s                      |
-| mpnp   | 0.2s                     | 0.2s                   | 0.5s                    |
+| yarn   | 11s                       | 1.2s                   | 3.4s                      |
+| pnpm   | 13s                      | 2.2s                   | 5.5s                      |
+| mpnp   | 0.4s                     | 0.4s                   | 1.7s                    |
 
 
 Because this is a proof of concept, many assumptions need to be fullfilled for mpnp to work:
