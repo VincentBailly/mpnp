@@ -1,0 +1,19 @@
+{
+  "name": "npmp",
+  "version": "0.0.1",
+  "bin": "./bin/install.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "execa": "*"
+  },
+  "devDependencies": {
+    "request": "^2.88.0",
+    "rimraf": "^3.0.0",
+    "semver": "*",
+    "tar": "^5.0.5",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.4"
+  }
+}
