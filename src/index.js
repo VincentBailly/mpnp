@@ -6,8 +6,8 @@ const path = require("path");
 const tar = require("tar");
 const execa = require("execa");
 
-const cacheFolder = "/home/vincent/.mpnpCache";
-const installFolder = "/home/vincent/.mpnpInstall";
+const cacheFolder = path.join(process.env.HOME, ".mpnpCache");
+const installFolder =  path.join(process.env.HOME,".mpnpInstall");
 
 // When using this package manager, some tool don't declare peer dependencies
 // and therefore we need to use the following options to make these work.
@@ -215,7 +215,6 @@ function resolveVersion(packageName, range) {
         data += chunk;
       });
 
-      // The whole response has been received. Print out the result.
       resp.on("end", () => {
         const versions = Object.keys(JSON.parse(data).versions);
         const winner = versions
@@ -228,9 +227,9 @@ function resolveVersion(packageName, range) {
   });
 }
 
-function exists(folder) {
+function exists(node) {
   try {
-    fs.accessSync(folder)
+    fs.accessSync(node)
     return true;
   } catch {
     return false;
