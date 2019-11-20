@@ -5,7 +5,10 @@ This project is not meant to be production ready but is a proof of concept.
 
 This package manager is optimized for performance in the context of working on a large nodejs-based monorepo.
 
-Benchmark, (the measured scenarios are the three that are the most frequent when working with a monorepo.)
+**Benchmark**
+
+The measured scenarios are the three that are the most frequent when working with a monorepo.
+
 [A simple monorepo](https://github.com/VincentBailly/TypeScriptMonoRepo/tree/hackathon)
 
 |        |  warm cache + clean repo | warm cache + warm repo | adding a new dependency (react) |
